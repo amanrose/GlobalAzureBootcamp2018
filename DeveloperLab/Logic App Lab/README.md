@@ -32,7 +32,7 @@ Sign in to the [Azure Portal](https://portal.azure.com) with your Azure account 
 
 2. Under **Create logic app**, provide this information about your logic app as shown and described. When you're done, choose **Pin to dashboard > Create**.
 
-	![create-logic-app-settings](images/create-logic-app-settingsp.png)
+	![create-logic-app-settings](images/create-logic-app-settings.png)
 
 Setting		Value				Description
 Name		LA-TravelTime			The name for your logic app
@@ -63,7 +63,7 @@ Next, add the recurrence trigger, which fires based on a specified schedule. Eve
 4. Provide the schedule and recurrence details for your trigger as shown and described:
 
 	![schedule-recurrence-trigger-settings](images/schedule-recurrence-trigger-settings.png)
-	![trigger-settings](images/trigger-settings)
+	![trigger-settings](images/trigger-settings.png)
 
 This trigger fires every weekday, every 15 minutes, starting at 7:00 AM and ending at 9:45 AM. The Preview box shows the recurrence schedule. For more information, see [Schedule tasks and workflows](https://docs.microsoft.com/en-us/azure/connectors/connectors-native-recurrence) and [Workflow actions and triggers](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-actions-triggers#recurrence-trigger).
 
@@ -107,17 +107,17 @@ By default, the previous **Get route** action returns the current travel time wi
 
 2. Search for "variables", and select this action: **Variables - Initialize variable**
 
-	![select-initialize-variable-action](images/select-initialize-variable-action)
+	![select-initialize-variable-action](images/select-initialize-variable-action.png)
 
 3. Rename this action with this description: "Create variable to store travel time"
 
 4. Provide the details for your variable as described here:
 
-	![travel-time-variable-settings](images/travel-time-variable-settings)
+	![travel-time-variable-settings](images/travel-time-variable-settings.png)
 
 a. To create the expression for the Value field, click inside the field so that the dynamic content list appears. If necessary, widen your browser until the list appears. In the dynamic content list, choose Expression. 
 
-	![initialize-variable-action-settings](images/initialize-variable-action-settings)
+	![initialize-variable-action-settings](images/initialize-variable-action-settings.png)
 
 When you click inside some edit boxes, either a dynamic content list or an inline parameter list appears. This list shows any parameters from previous actions that you can use as inputs in your workflow. The dynamic content list has an expression editor where you can select functions for performing operations. This expression editor appears only in the dynamic content list.
 
