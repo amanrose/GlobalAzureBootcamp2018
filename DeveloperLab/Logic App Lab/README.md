@@ -98,7 +98,7 @@ Now that you have a trigger, add an [action](https://docs.microsoft.com/en-us/az
 
 Next, create a variable so that you can convert and store the current travel time as minutes, rather than seconds. That way, you can avoid repeating the conversion and use the value more easily in later steps. 
 
-###Create variable to store travel time
+### Create variable to store travel time
 
 Sometimes, you might want to perform operations on data in your workflow and use the results in later actions. To save these results so that you can easily reuse or reference them, you can create variables to store those results after processing them. You can create variables only at the top level in your logic app.
 
@@ -233,7 +233,7 @@ Next, test your logic app, which now looks similar to this example:
 
 	![check-travel-time-finished](images/check-travel-time-finished.png)
 
-###Run your logic app
+### Run your logic app
 
 To manually start your logic app, on the designer toolbar bar, choose **Run**. If the current travel time stays under your limit, your logic app does nothing else and waits for the next interval before checking again. But if the current travel time exceeds your limit, you get an email with the current travel time and the number of minutes above your limit. Here is an example email that your logic app sends:
 
