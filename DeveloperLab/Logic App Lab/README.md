@@ -110,33 +110,33 @@ By default, the previous **Get route** action returns the current travel time wi
 
 	![travel-time-variable-settings](images/travel-time-variable-settings.png)
 
-a. To create the expression for the Value field, click inside the field so that the dynamic content list appears. If necessary, widen your browser until the list appears. In the dynamic content list, choose Expression. 
+	a. To create the expression for the Value field, click inside the field so that the dynamic content list appears. If necessary, widen your browser until the list appears. In the dynamic content list, choose Expression. 
 
-![initialize-variable-action-settings](images/initialize-variable-action-settings.png)
+	![initialize-variable-action-settings](images/initialize-variable-action-settings.png)
 
-When you click inside some edit boxes, either a dynamic content list or an inline parameter list appears. This list shows any parameters from previous actions that you can use as inputs in your workflow. The dynamic content list has an expression editor where you can select functions for performing operations. This expression editor appears only in the dynamic content list.
+	When you click inside some edit boxes, either a dynamic content list or an inline parameter list appears. This list shows any parameters from previous actions that you can use as inputs in your workflow. The dynamic content list has an expression editor where you can select functions for performing operations. This expression editor appears only in the dynamic content list.
 
-Your browser width determines which list appears. If your browser is wide, the dynamic content list appears. If your browser is narrow, a parameter list appears inline under the edit box that currently has focus.
+	Your browser width determines which list appears. If your browser is wide, the dynamic content list appears. If your browser is narrow, a parameter list appears inline under the edit box that currently has focus.
 
-b. In the expression editor, enter this expression: `div(,60)`
+	b. In the expression editor, enter this expression: `div(,60)`
 
-![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2.png)
+	![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2.png)
 
-c. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
+	c. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
 
-![initialize-variable-action-settings-3](images/initialize-variable-action-settings-3.png)
+	![initialize-variable-action-settings-3](images/initialize-variable-action-settings-3.png)
 
-d. In the dynamic content list, select **Travel Duration Traffic**.
+	d. In the dynamic content list, select **Travel Duration Traffic**.
 
-![initialize-variable-action-settings-4](images/initialize-variable-action-settings-4.png)
+	![initialize-variable-action-settings-4](images/initialize-variable-action-settings-4.png)
 
-e. After the field resolves inside the expression, choose **OK**.
+	e. After the field resolves inside the expression, choose **OK**.
 
-![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5.png)
+	![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5.png)
 
-f. The **Value** field now appears as shown here:
+	f. The **Value** field now appears as shown here:
 
-![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6.png)
+	![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6.png)
 
 5. Save your logic app.
 
@@ -150,23 +150,23 @@ Next, add a condition that checks whether the current travel time is greater tha
 
 3. Build a condition that checks whether **travelTime** exceeds your specified limit as described and shown here:
 
-a. Inside the condition, click inside the **Choose a value** box, which is on the left (wide browser view) or on top (narrow browser view).
+	a. Inside the condition, click inside the **Choose a value** box, which is on the left (wide browser view) or on top (narrow browser view).
 
-b. From either the dynamic content list or the parameter list, select the **travelTime** field under **Variables**.
+	b. From either the dynamic content list or the parameter list, select the **travelTime** field under **Variables**.
 
-c. In the comparison box, select this operator: **is greater than**
+	c. In the comparison box, select this operator: **is greater than**
 
-d. In the **Choose a value** box on the right (wide view) or bottom (narrow view), enter this limit: 15
+	d. In the **Choose a value** box on the right (wide view) or bottom (narrow view), enter this limit: 15
 
-For example, if you're working in narrow view, here is how you build this condition:
+	For example, if you're working in narrow view, here is how you build this condition:
 
-![build-condition-check-travel-time-narrow](images/build-condition-check-travel-time-narrow.png)
+	![build-condition-check-travel-time-narrow](images/build-condition-check-travel-time-narrow.png)
 
 4. Save your logic app.
 
 Next, add the action to perform when the travel time exceeds your limit.
 
-### Send mail when limit is exceeded
+	### Send mail when limit is exceeded
 
 Now, add an action that emails you when the travel time exceeds your limit. This email includes the current travel time and the extra time necessary to travel the specified route. 
 
@@ -197,31 +197,31 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 	![send-email-subject-settings](images/send-email-subject-settings.png)
 7. In the **Body** box, specify the content for the email body. 
 
-a. Enter the text "Add extra travel time (minutes):" with a trailing space. 
+	a. Enter the text "Add extra travel time (minutes):" with a trailing space. 
 	
-b. If necessary, widen your browser until the dynamic content list appears. In the dynamic content list, choose **Expression**.
+	b. If necessary, widen your browser until the dynamic content list appears. In the dynamic content list, choose **Expression**.
 
-![send-email-body-settings](images/send-email-body-settings.png)
+	![send-email-body-settings](images/send-email-body-settings.png)
 
-c. In the expression editor, enter this expression so that you can calculate the number of minutes that exceed your limit: sub(,15)
+	c. In the expression editor, enter this expression so that you can calculate the number of minutes that exceed your limit: `sub(,15)`
 
-![send-email-body-settings-2](images/send-email-body-settings-2.png)
+	![send-email-body-settings-2](images/send-email-body-settings-2.png)
 	
-d. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
+	d. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
 
-![send-email-body-settings-3](images/send-email-body-settings-3.png)
+	![send-email-body-settings-3](images/send-email-body-settings-3.png)
 
-e. Under **Variables**, select **travelTime**.
+	e. Under **Variables**, select **travelTime**.
 
-![send-email-body-settings-4](images/send-email-body-settings-4.png)
+	![send-email-body-settings-4](images/send-email-body-settings-4.png)
 
-f. After the field resolves inside the expression, choose **OK**.
+	f. After the field resolves inside the expression, choose **OK**.
 
-![send-email-body-settings-5](images/send-email-body-settings-5.png)
+	![send-email-body-settings-5](images/send-email-body-settings-5.png)
+	
+	The Body field now appears as shown here:
 
-The Body field now appears as shown here:
-
-![send-email-body-settings-6](images/send-email-body-settings-6.png)
+	![send-email-body-settings-6](images/send-email-body-settings-6.png)
 
 8. Save your logic app.
 
