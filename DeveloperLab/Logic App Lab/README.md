@@ -86,8 +86,7 @@ Now that you have a trigger, add an [action](https://docs.microsoft.com/en-us/az
 
 5. Provide details for the Get route action as shown and described here, for example:
 
-	![get-route-action-settings](images/get-route-action-settings.png)
-	![route-settings](images/route-settings.png)
+	![get-route-action-settings](images/get-route-action-settings.png)	![route-settings](images/route-settings.png)
 
 6. Save your logic app.
 
@@ -135,7 +134,7 @@ e. After the field resolves inside the expression, choose **OK**.
 
 ![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5.png)
 
-	The **Value** field now appears as shown here:
+f. The **Value** field now appears as shown here:
 
 ![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6.png)
 
@@ -152,8 +151,11 @@ Next, add a condition that checks whether the current travel time is greater tha
 3. Build a condition that checks whether **travelTime** exceeds your specified limit as described and shown here:
 
 a. Inside the condition, click inside the **Choose a value** box, which is on the left (wide browser view) or on top (narrow browser view).
+
 b. From either the dynamic content list or the parameter list, select the **travelTime** field under **Variables**.
+
 c. In the comparison box, select this operator: **is greater than**
+
 d. In the **Choose a value** box on the right (wide view) or bottom (narrow view), enter this limit: 15
 
 For example, if you're working in narrow view, here is how you build this condition:
@@ -195,31 +197,31 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 	![send-email-subject-settings](images/send-email-subject-settings.png)
 7. In the **Body** box, specify the content for the email body. 
 
-	a. Enter the text "Add extra travel time (minutes):" with a trailing space. 
+a. Enter the text "Add extra travel time (minutes):" with a trailing space. 
 	
-	b. If necessary, widen your browser until the dynamic content list appears. In the dynamic content list, choose **Expression**.
+b. If necessary, widen your browser until the dynamic content list appears. In the dynamic content list, choose **Expression**.
 
-	![send-email-body-settings](images/send-email-body-settings.png)
+![send-email-body-settings](images/send-email-body-settings.png)
 
-	c. In the expression editor, enter this expression so that you can calculate the number of minutes that exceed your limit: sub(,15)
+c. In the expression editor, enter this expression so that you can calculate the number of minutes that exceed your limit: sub(,15)
 
-	![send-email-body-settings-2](images/send-email-body-settings-2.png)
+![send-email-body-settings-2](images/send-email-body-settings-2.png)
 	
-	d. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
+d. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
 
-	![send-email-body-settings-3](images/send-email-body-settings-3.png)
+![send-email-body-settings-3](images/send-email-body-settings-3.png)
 
-	e. Under **Variables**, select **travelTime**.
+e. Under **Variables**, select **travelTime**.
 
-	![send-email-body-settings-4](images/send-email-body-settings-4.png)
+![send-email-body-settings-4](images/send-email-body-settings-4.png)
 
-	f. After the field resolves inside the expression, choose **OK**.
+f. After the field resolves inside the expression, choose **OK**.
 
-	![send-email-body-settings-5](images/send-email-body-settings-5.png)
+![send-email-body-settings-5](images/send-email-body-settings-5.png)
 
-	The Body field now appears as shown here:
+The Body field now appears as shown here:
 
-	![send-email-body-settings-6](images/send-email-body-settings-6.png)
+![send-email-body-settings-6](images/send-email-body-settings-6.png)
 
 8. Save your logic app.
 
