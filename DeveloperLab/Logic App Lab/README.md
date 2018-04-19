@@ -15,16 +15,16 @@ When you're done, your logic app looks like this workflow at a high level:
 
 	![check-travel-time-overview](images/check-travel-time-overview.png)
 
-###Prerequisites
+### Prerequisites
 
 * An email account form an email provider supported by Logic Apps, such as Office 365 Outlook, Outlook.com, or Gmail. See the full connector list [here](https://docs.microsoft.com/en-us/connectors/).
 * To get the travel time for a route, you need an access key for the Bing Maps API.
 
-###Sign into the Azure portal
+### Sign into the Azure portal
 
 Sign in to the [Azure Portal](https://portal.azure.com) with your Azure account credentials.
 
-###Create your Logic App
+### Create your Logic App
 
 1. From the main Azure menu, choose **Create a resource > Enterprise Integration > Logic App**.
 
@@ -48,7 +48,7 @@ Log Analytics	Off				Keep the Off setting for diagnostic logging.
 
 Next, add the recurrence trigger, which fires based on a specified schedule. Every logic app must start with a trigger, which fires when a specific event happens or when new data meets a specific condition.
 
-###Add Scheduler Trigger
+### Add Scheduler Trigger
 
 1. On the designer, enter "recurrence" in the search box. Select this trigger: Schedule - Recurrence
 
@@ -73,7 +73,7 @@ This trigger fires every weekday, every 15 minutes, starting at 7:00 AM and endi
 
 Your logic app is now live but doesn't do anything other recur. So, add an action that responds when the trigger fires.
 
-###Get the travel time for a route
+### Get the travel time for a route
 
 Now that you have a trigger, add an [action](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview#logic-app-concepts) that gets the travel time between two places. Logic Apps provides a connector for the Bing Maps API so that you can easily get this information. Before you start this task, make sure that you have a Bing Maps API key as described in this tutorial's prerequisites.
 
@@ -147,7 +147,7 @@ e. After the field resolves inside the expression, choose **OK**.
 
 Next, add a condition that checks whether the current travel time is greater than a specific limit.
 
-###Compare travel time with limit
+### Compare travel time with limit
 
 1. Under the previous action, choose **+ New step > Add a condition**. 
 
@@ -168,7 +168,7 @@ Next, add a condition that checks whether the current travel time is greater tha
 
 Next, add the action to perform when the travel time exceeds your limit.
 
-###Send mail when limit is exceeded
+### Send mail when limit is exceeded
 
 Now, add an action that emails you when the travel time exceeds your limit. This email includes the current travel time and the extra time necessary to travel the specified route. 
 
@@ -247,7 +247,7 @@ To create other logic apps that use the **Schedule - Recurrence** trigger, check
 	* Delete older Azure blobs.
 	* Add a message to an Azure Storage queue.
 
-###Clean up resources
+### Clean up resources
 
 When no longer needed, delete the resource group that contains your logic app and related resources. On the main Azure menu, go to **Resource groups**, and select the resource group for your logic app. Choose **Delete resource group**. Enter the resource group name as confirmation, and choose **Delete**.
 
