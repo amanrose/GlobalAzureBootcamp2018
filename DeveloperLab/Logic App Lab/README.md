@@ -1,4 +1,3 @@
-
 # Check traffic with a scheduler-based Logic App
 
 Azure Logic Apps helps you automate workflows that run on a schedule. This tutorial shows how you can build a logic app with a scheduler trigger that runs every weekday morning and checks the travel time, including traffic, between two places. If the time exceeds a specific limit, the logic app sends email with the travel time and the extra time necessary for your destination.
@@ -49,7 +48,7 @@ Next, add the recurrence trigger, which fires based on a specified schedule. Eve
 
 	![add-schedule-recurrence-trigger](images/add-schedule-recurrence-trigger.png)
 
-2. On the **Recurrence** shape, choose the ellipses (...) button, and choose **Rename**. Rename the trigger with this description: "Check travel time every weekday morning".
+2. On the **Recurrence** shape, choose the **ellipses (...)** button, and choose **Rename**. Rename the trigger with this description: `Check travel time every weekday morning`.
 
 	![rename-recurrence-schedule-trigger](images/rename-recurrence-schedule-trigger.png)
 
@@ -65,6 +64,8 @@ This trigger fires every weekday, every 15 minutes, starting at 7:00 AM and endi
 5. To hide the trigger's details for now, click inside the shape's title bar.
 
 	![collapse-trigger-shape](images/collapse-trigger-shape.png)
+	
+6. Save your logic app. On the designer toolbar, choose **Save**.
 
 Your logic app is now live but doesn't do anything other recur. So, add an action that responds when the trigger fires.
 
