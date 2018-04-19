@@ -147,18 +147,18 @@ Next, add a condition that checks whether the current travel time is greater tha
 
 1. Under the previous action, choose **+ New step > Add a condition**. 
 
-2. Rename the condition with this description: "If travel time exceeds limit"
+2. Rename the condition with this description: `If travel time exceeds limit`
 
 3. Build a condition that checks whether **travelTime** exceeds your specified limit as described and shown here:
 
-	a. Inside the condition, click inside the **Choose a value** box, which is on the left (wide browser view) or on top (narrow browser view).
-	b. From either the dynamic content list or the parameter list, select the **travelTime** field under **Variables**.
-	c. In the comparison box, select this operator: **is greater than**
-	d. In the **Choose a value** box on the right (wide view) or bottom (narrow view), enter this limit: 15
+a. Inside the condition, click inside the **Choose a value** box, which is on the left (wide browser view) or on top (narrow browser view).
+b. From either the dynamic content list or the parameter list, select the **travelTime** field under **Variables**.
+c. In the comparison box, select this operator: **is greater than**
+d. In the **Choose a value** box on the right (wide view) or bottom (narrow view), enter this limit: 15
 
-	For example, if you're working in narrow view, here is how you build this condition:
+For example, if you're working in narrow view, here is how you build this condition:
 
-	![build-condition-check-travel-time-narrow](images/build-condition-check-travel-time-narrow.png)
+![build-condition-check-travel-time-narrow](images/build-condition-check-travel-time-narrow.png)
 
 4. Save your logic app.
 
