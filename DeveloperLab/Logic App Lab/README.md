@@ -13,7 +13,7 @@ Create a blank logic app.
 
 When you're done, your logic app looks like this workflow at a high level:
 
-	![check-travel-time-overview](images/check-travel-time-overview)
+	![check-travel-time-overview](images/check-travel-time-overview.png)
 
 ###Prerequisites
 
@@ -28,11 +28,11 @@ Sign in to the [Azure Portal](https://portal.azure.com) with your Azure account 
 
 1. From the main Azure menu, choose **Create a resource > Enterprise Integration > Logic App**.
 
-	![create-logic-app](images/create-logic-app)
+	![create-logic-app](images/create-logic-app.png)
 
 2. Under **Create logic app**, provide this information about your logic app as shown and described. When you're done, choose **Pin to dashboard > Create**.
 
-	![create-logic-app-settings](images/create-logic-app-settings)
+	![create-logic-app-settings](images/create-logic-app-settingsp.png)
 
 Setting		Value				Description
 Name		LA-TravelTime			The name for your logic app
@@ -43,7 +43,7 @@ Log Analytics	Off				Keep the Off setting for diagnostic logging.
 
 3. After Azure deploys your app, the Logic Apps Designer opens and shows a page with an introduction video and templates for common logic app patterns. Under **Templates**, choose **Blank Logic App**.
 
-	![choose-logic-app-template](images/choose-logic-app-template)
+	![choose-logic-app-template](images/choose-logic-app-template.png)
 
 
 Next, add the recurrence trigger, which fires based on a specified schedule. Every logic app must start with a trigger, which fires when a specific event happens or when new data meets a specific condition.
@@ -52,24 +52,24 @@ Next, add the recurrence trigger, which fires based on a specified schedule. Eve
 
 1. On the designer, enter "recurrence" in the search box. Select this trigger: Schedule - Recurrence
 
-	![add-schedule-recurrence-trigger](images/add-schedule-recurrence-trigger)
+	![add-schedule-recurrence-trigger](images/add-schedule-recurrence-trigger.png)
 
 2. On the **Recurrence** shape, choose the ellipses (...) button, and choose **Rename**. Rename the trigger with this description: "Check travel time every weekday morning".
 
-	![rename-recurrence-schedule-trigger](images/rename-recurrence-schedule-trigger)
+	![rename-recurrence-schedule-trigger](images/rename-recurrence-schedule-trigger.png)
 
 3. Inside the trigger, choose **Show advanced options**.
 
 4. Provide the schedule and recurrence details for your trigger as shown and described:
 
-	![schedule-recurrence-trigger-settings](images/schedule-recurrence-trigger-settings)
+	![schedule-recurrence-trigger-settings](images/schedule-recurrence-trigger-settings.png)
 	![trigger-settings](images/trigger-settings)
 
 This trigger fires every weekday, every 15 minutes, starting at 7:00 AM and ending at 9:45 AM. The Preview box shows the recurrence schedule. For more information, see [Schedule tasks and workflows](https://docs.microsoft.com/en-us/azure/connectors/connectors-native-recurrence) and [Workflow actions and triggers](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-actions-triggers#recurrence-trigger).
 
 5. To hide the trigger's details for now, click inside the shape's title bar.
 
-	![collapse-trigger-shape](images/collapse-trigger-shape)
+	![collapse-trigger-shape](images/collapse-trigger-shape.png)
 
 Your logic app is now live but doesn't do anything other recur. So, add an action that responds when the trigger fires.
 
@@ -83,15 +83,15 @@ Now that you have a trigger, add an [action](https://docs.microsoft.com/en-us/az
 
 3. If you don't already have a Bing Maps connection, you're asked to create a connection. Provide these connection details, and choose **Create**.
 
-	![create-maps-connection](images/create-maps-connection)
-	![bing-connection-settings](images/bing-connection-settings)
+	![create-maps-connection](images/create-maps-connection.png)
+	![bing-connection-settings](images/bing-connection-settings.png)
 
 4. Rename the action with this description: "Get route and travel time with traffic"
 
 5. Provide details for the Get route action as shown and described here, for example:
 
-	![get-route-action-settings](images/get-route-action-settings)
-	![route-settings](images/route-settings)
+	![get-route-action-settings](images/get-route-action-settings.png)
+	![route-settings](images/route-settings.png)
 
 6. Save your logic app.
 
@@ -125,23 +125,23 @@ Your browser width determines which list appears. If your browser is wide, the d
 
 b. In the expression editor, enter this expression: div(,60)
 
-	![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2)
+	![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2.png)
 
 c. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
 
-	![initialize-variable-action-settings-3](images/initialize-variable-action-settings-3)
+	![initialize-variable-action-settings-3](images/initialize-variable-action-settings-3.png)
 
 d. In the dynamic content list, select **Travel Duration Traffic**.
 
-	![initialize-variable-action-settings-4](images/initialize-variable-action-settings-4)
+	![initialize-variable-action-settings-4](images/initialize-variable-action-settings-4.png)
 
 e. After the field resolves inside the expression, choose **OK**.
 
-	![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5)
+	![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5.png)
 
 	The **Value** field now appears as shown here:
 
-	![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6)
+	![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6.png)
 
 5. Save your logic app.
 
@@ -162,7 +162,7 @@ Next, add a condition that checks whether the current travel time is greater tha
 
 	For example, if you're working in narrow view, here is how you build this condition:
 
-	![build-condition-check-travel-time-narrow](images/build-condition-check-travel-time-narrow)
+	![build-condition-check-travel-time-narrow](images/build-condition-check-travel-time-narrow.png)
 
 4. Save your logic app.
 
@@ -176,7 +176,7 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 
 2. Search for "send email", and select the email connector and the "send email action" that you want to use.
 
-	![add-action-send-email](images/add-action-send-email)
+	![add-action-send-email](images/add-action-send-email.png)
 
 	For personal Microsoft accounts, select Outlook.com. 
 	For Azure work or school accounts, select Office 365 Outlook.
@@ -196,7 +196,7 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 	
 	For example, if your browser is in narrow view:
 
-	![send-email-subject-settings](images/send-email-subject-settings)
+	![send-email-subject-settings](images/send-email-subject-settings.png)
 
 7. In the **Body** box, specify the content for the email body. 
 
@@ -204,39 +204,39 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 	
 	b. If necessary, widen your browser until the dynamic content list appears. In the dynamic content list, choose **Expression**.
 
-	![send-email-body-settings](images/send-email-body-settings)
+	![send-email-body-settings](images/send-email-body-settings.png)
 
 	c. In the expression editor, enter this expression so that you can calculate the number of minutes that exceed your limit: sub(,15)
 
-	![send-email-body-settings-2](images/send-email-body-settings-2)
+	![send-email-body-settings-2](images/send-email-body-settings-2.png)
 	
 	d. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
 
-	![send-email-body-settings-3](images/send-email-body-settings-3)
+	![send-email-body-settings-3](images/send-email-body-settings-3.png)
 
 	e. Under **Variables**, select **travelTime**.
 
-	![send-email-body-settings-4](images/send-email-body-settings-4)
+	![send-email-body-settings-4](images/send-email-body-settings-4.png)
 
 	f. After the field resolves inside the expression, choose **OK**.
 
-	![send-email-body-settings-5](images/send-email-body-settings-5)
+	![send-email-body-settings-5](images/send-email-body-settings-5.png)
 
 	The Body field now appears as shown here:
 
-	![send-email-body-settings-6](images/send-email-body-settings-6)
+	![send-email-body-settings-6](images/send-email-body-settings-6.png)
 
 8. Save your logic app.
 
 Next, test your logic app, which now looks similar to this example:
 
-	![check-travel-time-finished](images/check-travel-time-finished)
+	![check-travel-time-finished](images/check-travel-time-finished.png)
 
 ###Run your logic app
 
 To manually start your logic app, on the designer toolbar bar, choose **Run**. If the current travel time stays under your limit, your logic app does nothing else and waits for the next interval before checking again. But if the current travel time exceeds your limit, you get an email with the current travel time and the number of minutes above your limit. Here is an example email that your logic app sends:
 
-	![email-notification](images/email-notification)
+	![email-notification](images/email-notification.png)
 
 If you don't get any emails, check your email's junk folder. Your email junk filter might redirect these kinds of mails. 
 
@@ -251,6 +251,6 @@ To create other logic apps that use the **Schedule - Recurrence** trigger, check
 
 When no longer needed, delete the resource group that contains your logic app and related resources. On the main Azure menu, go to **Resource groups**, and select the resource group for your logic app. Choose **Delete resource group**. Enter the resource group name as confirmation, and choose **Delete**.
 
-	![delete-resource-group](images/delete-resource-group)
+	![delete-resource-group](images/delete-resource-group.png)
 
 Congratulations, you've completed this Logic App Lab! [Learn More about Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/).
