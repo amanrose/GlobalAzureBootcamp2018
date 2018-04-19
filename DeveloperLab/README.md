@@ -3,7 +3,7 @@ We will be going through 2 labs to help you learn Azure Funcations and Logic App
 
 [Azure Functions Lab](https://github.com/Microsoft/TechnicalCommunityContent/tree/master/Cloud%20Computing/Azure%20Functions/Session%202%20-%20Hands%20On)
 
-[Azure Logic App Lab](Logic App Lab/README.md)
+[Azure Logic App Lab](https://github.com/ammeemke/GlobalAzureBootcamp2018/blob/master/DeveloperLab/Logic%20App%20Lab/README.md)
 
 Challenge: Create a Logic App that will trigger on new rejected images from your Function Lab and notify you via e-mail.
 
