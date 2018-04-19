@@ -12,7 +12,7 @@ Create a blank logic app.
 * Add a condition that compares the travel time against a specified limit.
 * Add an action that sends email if the travel time exceeds the limit.
 
-When you're done, your logic app looks like this workflow at a high level:
+When you're done, your logic app looks like this workflow at a high level.
 
 	![check-travel-time-overview](images/check-travel-time-overview.png)
 	
