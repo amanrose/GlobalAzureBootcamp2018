@@ -1,3 +1,4 @@
+
 # Global Azure Bootcamp - Logic Apps Lab
 ## Check traffic with a scheduler-based Logic App
 
@@ -14,7 +15,7 @@ Create a blank logic app.
 When you're done, your logic app looks like this workflow at a high level:
 
 	![check-travel-time-overview](images/check-travel-time-overview.png)
-
+	
 ### Prerequisites
 
 * An email account form an email provider supported by Logic Apps, such as Office 365 Outlook, Outlook.com, or Gmail. See the full connector list [here](https://docs.microsoft.com/en-us/connectors/).
