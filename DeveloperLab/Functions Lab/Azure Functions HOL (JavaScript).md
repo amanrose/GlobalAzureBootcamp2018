@@ -52,7 +52,7 @@ The first step in writing an Azure Function is to create an Azure Function App. 
 
 2. Click **+ New**, followed by **Compute** and **Function App**.
 
-    ![Creating an Azure Function App](Images/new-function-app.png)
+    ![Creating an Azure Function App](images/new-function-app.png)
 
     _Creating an Azure Function App_
 
@@ -60,31 +60,31 @@ The first step in writing an Azure Function is to create an Azure Function App. 
 
 	> The app name becomes part of a DNS name and therefore must be unique within Azure. Make sure a green check mark appears to the name indicating it is unique. You probably **won't** be able to use "functionslab" as the app name.
  
-    ![Creating a Function App](Images/function-app-name.png)
+    ![Creating a Function App](images/function-app-name.png)
 
     _Creating a Function App_
 
 1. Click **Resource groups** in the ribbon on the left side of the portal, and then click the resource group created for the Function App.
  
-    ![Opening the resource group](Images/open-resource-group.png)
+    ![Opening the resource group](images/open-resource-group.png)
 
     _Opening the resource group_
 
 1. Periodically click the **Refresh** button at the top of the blade until "Deploying" changes to "Succeeded," indicating that the Function App has been deployed. Then click the storage account that was created for the Function App.
 
-    ![Opening the storage account](Images/open-storage-account.png)
+    ![Opening the storage account](images/open-storage-account.png)
 
     _Opening the storage account_
 
 1. Click **Blobs** to view the contents of blob storage.
 
-    ![Opening blob storage](Images/open-blob-storage.png)
+    ![Opening blob storage](images/open-blob-storage.png)
 
     _Opening blob storage_
 
 1. Click **+ Container**. Type "uploaded" into the **Name** box and set **Public access level** to **Private**. Then click the **OK** button to create a new container.
 
-    ![Adding a container](Images/add-container.png)
+    ![Adding a container](images/add-container.png)
 
     _Adding a container_
 
@@ -92,7 +92,7 @@ The first step in writing an Azure Function is to create an Azure Function App. 
 
 1. Confirm that all three containers were added to blob storage.
 
-    ![The new containers](Images/new-containers.png)
+    ![The new containers](images/new-containers.png)
 
     _The new containers_
 
@@ -105,25 +105,25 @@ Once you have created an Azure Function App, you can add Azure Functions to it. 
 
 1. Return to the blade for the "FunctionsLabResourceGroup" resource group and click the Azure Function App that you created in [Exercise 1](#Exercise1). 
 
-    ![Opening the Function App](Images/open-function-app.png)
+    ![Opening the Function App](images/open-function-app.png)
 
     _Opening the Function App_
 
 1. Click the **+** sign to the right of **Functions**. Set the language to **JavaScript**, and then click **Custom function**.
 
-    ![Adding a function](Images/js-add-function.png)
+    ![Adding a function](images/js-add-function.png)
 
     _Adding a function_
 
 1. Set **Language** to **JavaScript**. Then click **BlobTrigger-JavaScript**.
   
-    ![Selecting a function template](Images/js-select-template.png)
+    ![Selecting a function template](images/js-select-template.png)
 
     _Selecting a function template_
 
 1. Enter "BlobImageAnalysis" (without quotation marks) for the function name and "uploaded/{name}" into the **Path** box. (The latter applies the blob storage trigger to the "uploaded" container that you created in Exercise 1.) Then click the **Create** button to create the Azure Function.
 
-    ![Creating an Azure Function](Images/create-azure-function.png)
+    ![Creating an Azure Function](images/create-azure-function.png)
 
     _Creating an Azure Function_
 
@@ -201,13 +201,13 @@ Once you have created an Azure Function App, you can add Azure Functions to it. 
 
 1. Click the **Save** button at the top of the code editor to save your changes. Then click **View files**.
 
-    ![Saving the function](Images/js-save-index-js.png)
+    ![Saving the function](images/js-save-index-js.png)
 
     _Saving the function_
 
 1. Click **function.json** to open that file for editing.
 
-    ![Opening function.json](Images/js-open-function-json.png)
+    ![Opening function.json](images/js-open-function-json.png)
 
     _Opening function.json_
 
@@ -233,13 +233,13 @@ Once you have created an Azure Function App, you can add Azure Functions to it. 
 
 1. Click **Save** to save the changes to the file. 
 
-    ![Saving function.json](Images/js-save-function-file.png)
+    ![Saving function.json](images/js-save-function-file.png)
 
     _Saving function.json_
 
 1. The function has been written, but you must install some dependency packages in order for it to work. The dependencies come from the two ```require``` statements at the beginning of the JavaScript code that you added. To resolve these dependencies, begin by clicking the function name in the ribbon on the left. Then click **Platform features**, followed by **Console** to open a developer console.
 
-    ![Opening the developer console](Images/js-open-dev-console.png)
+    ![Opening the developer console](images/js-open-dev-console.png)
 
     _Opening the developer console_
  
@@ -266,43 +266,43 @@ The Azure Function you created in [Exercise 2](#Exercise2) loads a subscription 
 
 1. In the Azure Portal, click **+ New**, followed by **AI + Cognitive Services** and **Computer Vision API**.
 
-    ![Creating a new Computer Vision API subscription](Images/new-vision-api.png)
+    ![Creating a new Computer Vision API subscription](images/new-vision-api.png)
 
     _Creating a new Computer Vision API subscription_
 
 1. Enter "VisionAPI" into the **Name** box and select **F0** as the **Pricing tier**. Under **Resource Group**, select **Use existing** and select the "FunctionsLabResourceGroup" resource group that you created for the Function App in Exercise 1. Check the **I confirm** box, and then click **Create**.
 
-    ![Subcribing to the Computer Vision API](Images/create-vision-api.png)
+    ![Subcribing to the Computer Vision API](images/create-vision-api.png)
 
     _Subcribing to the Computer Vision API_
 
 1. Return to the blade for "FunctionsLabResourceGroup" and click the Computer Vision API subscription that you just created.
 
-    ![Opening the Computer Vision API subscription](Images/open-vision-api.png)
+    ![Opening the Computer Vision API subscription](images/open-vision-api.png)
 
     _Opening the Computer Vision API subscription_
 
 1. Copy the URL under **Endpoint** into your favorite text editor so you can easily retrieve it in a moment. Then click **Show access keys**.
 
-    ![Viewing the access keys](Images/show-access-keys.png)
+    ![Viewing the access keys](images/show-access-keys.png)
 
     _Viewing the access keys_
 
 1. Click the **Copy** button to the right of **KEY 1** to copy the access key to the clipboard.
 
-    ![Copying the access key](Images/copy-access-key.png)
+    ![Copying the access key](images/copy-access-key.png)
 
     _Copying the access key_
 
 1. Return to the Function App in the Azure Portal and click the function name in the ribbon on the left. Then click **Platform features**, followed by **Application settings**. 
 
-    ![Viewing application settings](Images/open-app-settings.png)
+    ![Viewing application settings](images/open-app-settings.png)
 
     _Viewing application settings_
 
 1. Scroll down to the "App settings" section. Add a new app setting named "SubscriptionKey" (without quotation marks), and paste the subscription key that is on the clipboard into the **Value** box. Then add a setting named "VisionEndpoint" and set its value to the endpoint URL you saved in Step 4. Finish up by clicking **Save** at the top of the blade.
 
-    ![Adding application settings](Images/add-keys.png)
+    ![Adding application settings](images/add-keys.png)
 
     _Adding application settings_
 
@@ -315,43 +315,43 @@ Your function is configured to listen for changes to the blob container named "u
 
 1. In the Azure Portal, go to the resource group created for your Function App. Then click the storage account that was created for it.
 
-    ![Opening the storage account](Images/open-storage-account-2.png)
+    ![Opening the storage account](images/open-storage-account-2.png)
 
     _Opening the storage account_
 
 1. Click **Blobs** to view the contents of blob storage.
 
-    ![Opening blob storage](Images/open-blob-storage.png)
+    ![Opening blob storage](images/open-blob-storage.png)
 
     _Opening blob storage_
 
 1. Click **uploaded** to open the "uploaded" container.
 
-    ![Opening the "uploaded" container](Images/open-uploaded-container.png)
+    ![Opening the "uploaded" container](images/open-uploaded-container.png)
 
     _Opening the "uploaded" container_
 
 1. Click **Upload**.
 
-    ![Uploading images to the "uploaded" container](Images/upload-images-1.png)
+    ![Uploading images to the "uploaded" container](images/upload-images-1.png)
 
     _Uploading images to the "uploaded" container_
 
 1. Click the button with the folder icon to the right of the **Files** box. Select all of the files in this lab's "Resources" folder. Then click the **Upload** button to upload the files to the "uploaded" container.
 
-    ![Uploading images to the "uploaded" container](Images/upload-images-2.png)
+    ![Uploading images to the "uploaded" container](images/upload-images-2.png)
 
     _Uploading images to the "uploaded" container_
 
 1. Return to the blade for the "uploaded" container and verify that eight images were uploaded.
 
-    ![Images uploaded to the "uploaded" container](Images/uploaded-images.png)
+    ![Images uploaded to the "uploaded" container](images/uploaded-images.png)
 
     _Images uploaded to the "uploaded" container_
 
 1. Close the blade for the "uploaded" container and open the "accepted" container.
 
-    ![Opening the "accepted" container](Images/open-accepted-container.png)
+    ![Opening the "accepted" container](images/open-accepted-container.png)
 
     _Opening the "accepted" container_
 
@@ -359,13 +359,13 @@ Your function is configured to listen for changes to the blob container named "u
 
 	> It may take a minute or more for all of the images to appear in the container. If necessary, click **Refresh** every few seconds until you see all seven images.
 
-    ![Images in the "accepted" container](Images/accepted-images.png)
+    ![Images in the "accepted" container](images/accepted-images.png)
 
     _Images in the "accepted" container_
 
 1. Close the blade for the "accepted" container and open the blade for the "rejected" container. Verify that the "rejected" container holds one image. **This image was classified as adult or racy (or both) by the Computer Vision API**.
 
-    ![Images in the "rejected" container](Images/rejected-images.png)
+    ![Images in the "rejected" container](images/rejected-images.png)
 
     _Images in the "rejected" container_
 
@@ -386,19 +386,19 @@ In this exercise, you will use the cross-platform [Microsoft Azure Storage Explo
 
 	> If this is the first time you have run Storage Explorer, you may have to click the person icon and tell it which Azure subscription or subscriptions you want it to display. 
 
-    ![Opening the "rejected" container](Images/explorer-open-rejected-container.png)
+    ![Opening the "rejected" container](images/explorer-open-rejected-container.png)
 
     _Opening the "rejected" container_
 
 1. Right-click (on a Mac, Command-click) the image in the "rejected" container and select **Properties** from the context menu.
 
-    ![Viewing blob metadata](Images/explorer-view-blob-metadata.png)
+    ![Viewing blob metadata](images/explorer-view-blob-metadata.png)
 
     _Viewing blob metadata_
 
 1. Inspect the blob's metadata. *IsAdultContent* and *isRacyContent* are Boolean values that indicate whether the Computer Vision API detected adult or racy content in the image. *adultScore* and *racyScore* are the computed probabilities.
 
-    ![Scores returned by the Computer Vision API](Images/explorer-metadata-values.png)
+    ![Scores returned by the Computer Vision API](images/explorer-metadata-values.png)
 
     _Scores returned by the Computer Vision API_
 
