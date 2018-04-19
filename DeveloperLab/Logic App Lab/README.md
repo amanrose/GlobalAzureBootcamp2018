@@ -14,7 +14,7 @@ In this tutorial, you learn how to:
 
 When you're done, your logic app looks like this workflow at a high level:
 
-	![check-travel-time-overview](images/check-travel-time-overview.png)
+![check-travel-time-overview](images/check-travel-time-overview.png)
 	
 ### Prerequisites
 
@@ -112,7 +112,7 @@ By default, the previous **Get route** action returns the current travel time wi
 
 a. To create the expression for the Value field, click inside the field so that the dynamic content list appears. If necessary, widen your browser until the list appears. In the dynamic content list, choose Expression. 
 
-	![initialize-variable-action-settings](images/initialize-variable-action-settings.png)
+![initialize-variable-action-settings](images/initialize-variable-action-settings.png)
 
 When you click inside some edit boxes, either a dynamic content list or an inline parameter list appears. This list shows any parameters from previous actions that you can use as inputs in your workflow. The dynamic content list has an expression editor where you can select functions for performing operations. This expression editor appears only in the dynamic content list.
 
@@ -120,23 +120,23 @@ Your browser width determines which list appears. If your browser is wide, the d
 
 b. In the expression editor, enter this expression: `div(,60)`
 
-	![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2.png)
+![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2.png)
 
 c. Put your cursor inside the expression between the left parenthesis (() and the comma (,). Choose **Dynamic content**.
 
-	![initialize-variable-action-settings-3](images/initialize-variable-action-settings-3.png)
+![initialize-variable-action-settings-3](images/initialize-variable-action-settings-3.png)
 
 d. In the dynamic content list, select **Travel Duration Traffic**.
 
-	![initialize-variable-action-settings-4](images/initialize-variable-action-settings-4.png)
+![initialize-variable-action-settings-4](images/initialize-variable-action-settings-4.png)
 
 e. After the field resolves inside the expression, choose **OK**.
 
-	![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5.png)
+![initialize-variable-action-settings-5](images/initialize-variable-action-settings-5.png)
 
 	The **Value** field now appears as shown here:
 
-	![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6.png)
+![initialize-variable-action-settings-6](images/initialize-variable-action-settings-6.png)
 
 5. Save your logic app.
 
@@ -192,7 +192,6 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 	For example, if your browser is in narrow view:
 
 	![send-email-subject-settings](images/send-email-subject-settings.png)
-
 7. In the **Body** box, specify the content for the email body. 
 
 	a. Enter the text "Add extra travel time (minutes):" with a trailing space. 
@@ -225,13 +224,13 @@ Now, add an action that emails you when the travel time exceeds your limit. This
 
 Next, test your logic app, which now looks similar to this example:
 
-	![check-travel-time-finished](images/check-travel-time-finished.png)
+![check-travel-time-finished](images/check-travel-time-finished.png)
 
 ### Run your logic app
 
 To manually start your logic app, on the designer toolbar bar, choose **Run**. If the current travel time stays under your limit, your logic app does nothing else and waits for the next interval before checking again. But if the current travel time exceeds your limit, you get an email with the current travel time and the number of minutes above your limit. Here is an example email that your logic app sends:
 
-	![email-notification](images/email-notification.png)
+![email-notification](images/email-notification.png)
 
 If you don't get any emails, check your email's junk folder. Your email junk filter might redirect these kinds of mails. 
 
@@ -246,6 +245,6 @@ To create other logic apps that use the **Schedule - Recurrence** trigger, check
 
 When no longer needed, delete the resource group that contains your logic app and related resources. On the main Azure menu, go to **Resource groups**, and select the resource group for your logic app. Choose **Delete resource group**. Enter the resource group name as confirmation, and choose **Delete**.
 
-	![delete-resource-group](images/delete-resource-group.png)
+![delete-resource-group](images/delete-resource-group.png)
 
 Congratulations, you've completed this Logic App Lab! [Learn More about Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/).
