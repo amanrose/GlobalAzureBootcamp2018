@@ -104,7 +104,7 @@ By default, the previous **Get route** action returns the current travel time wi
 
 	![select-initialize-variable-action](images/select-initialize-variable-action.png)
 
-3. Rename this action with this description: "Create variable to store travel time"
+3. Rename this action with this description: `Create variable to store travel time`
 
 4. Provide the details for your variable as described here:
 
@@ -118,7 +118,7 @@ When you click inside some edit boxes, either a dynamic content list or an inlin
 
 Your browser width determines which list appears. If your browser is wide, the dynamic content list appears. If your browser is narrow, a parameter list appears inline under the edit box that currently has focus.
 
-b. In the expression editor, enter this expression: div(,60)
+b. In the expression editor, enter this expression: `div(,60)`
 
 	![initialize-variable-action-settings-2](images/initialize-variable-action-settings-2.png)
 
