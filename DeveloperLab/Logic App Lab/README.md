@@ -4,7 +4,7 @@
 
 Azure Logic Apps helps you automate workflows that run on a schedule. This tutorial shows how you can build a logic app with a scheduler trigger that runs every weekday morning and checks the travel time, including traffic, between two places. If the time exceeds a specific limit, the logic app sends email with the travel time and the extra time necessary for your destination.
 
-In this tutorial, you learn how to:
+In this tutorial, you learn how to
 Create a blank logic app. 
 * Add a trigger that works as a scheduler for your logic app.
 * Add an action that gets the travel time for a route.
