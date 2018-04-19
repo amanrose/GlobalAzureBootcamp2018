@@ -1,3 +1,4 @@
+
 # Check traffic with a scheduler-based Logic App
 
 Azure Logic Apps helps you automate workflows that run on a schedule. This tutorial shows how you can build a logic app with a scheduler trigger that runs every weekday morning and checks the travel time, including traffic, between two places. If the time exceeds a specific limit, the logic app sends email with the travel time and the extra time necessary for your destination.
@@ -33,13 +34,7 @@ Sign in to the [Azure Portal](https://portal.azure.com) with your Azure account 
 2. Under **Create logic app**, provide this information about your logic app as shown and described. When you're done, choose **Pin to dashboard > Create**.
 
 	![create-logic-app-settings](images/create-logic-app-settings.png)
-
-Setting		Value				Description
-Name		LA-TravelTime			The name for your logic app
-Subscription	<your-Azure-subscription-name>	The name for your Azure subscription
-Resource group	LA-TravelTime-RG		The name for the Azure resource group used to organize related resources
-Location	East US 2			The region where to store information about your logic app
-Log Analytics	Off				Keep the Off setting for diagnostic logging.
+	![la-settings](images/la-settings.png)
 
 3. After Azure deploys your app, the Logic Apps Designer opens and shows a page with an introduction video and templates for common logic app patterns. Under **Templates**, choose **Blank Logic App**.
 
