@@ -4,7 +4,7 @@ All resources from the MN Global Azure Bootcamp are available here for reference
 If you attended, please take our [survey](http://www.aka.ms/mngab)
 
 ## Additional Resources:
-Here are some resources to help you continue the learning.
+Here are some resources to help you continue learning.
 
 [Mircosoft Azure Documentation](https://docs.microsoft.com/en-us/azure/) -- All official Azure documentation, including many tutorials
 
